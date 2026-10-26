@@ -6,11 +6,11 @@ ScadLatch 面向这样的 3D 打印用户：已经找到一个有用的 OpenSCAD
 
 在本机浏览器中打开现有 `.scad`，选择受支持的平面，添加圆孔或矩形开口，并把修改写回可编辑的源程序。之后改变原模型的尺寸，新结构会跟随选中的面。最终保存修改后的 SCAD，以及由真实 OpenSCAD 引擎生成的 STL。
 
-[English](README.md)
+[English](README.md) · [发布包下载](https://github.com/WtxwNs/ScadLatch/releases) · [问题与反馈](https://github.com/WtxwNs/ScadLatch/issues)
 
-> **开发测试版，2026 年 10 月 26 日。** 早期长方体流程已完成浏览器检查和独立 Windows 安装复现。新增的圆角凸包与拉伸体已通过原生引擎检查，完整浏览器流程尚未独立检查。外部电子盒的圆角外壳已成功开口并调整尺寸，但保留了原模型的网格缺陷；另两个外部输入未完成修改或超时。完整结果（含失败）见[外部模型记录](docs/imported-model.md)。目前没有公开发布或真实用户采用结果。
+> **开发测试版，2026 年 10 月 26 日。** 实现者已检查 Rounded shell 的浏览器操作流程；另一位代理从源码 ZIP 独立复现了 Windows 安装、圆角外壳开口、改尺寸及独立 SCAD 编译。这是终端工程检查，不是独立浏览器易用性测试。外部电子盒的圆角外壳已成功开口并调整尺寸，但保留了原模型的网格缺陷；另两个外部输入未完成修改或超时。完整结果（含失败）见[外部模型记录](docs/imported-model.md)。真实用户采用与重复使用仍未验证。
 
-[42 秒托盘界面演示](docs/media/walkthrough.mp4) · [独立安装记录](docs/reproduction.md)
+[42 秒托盘界面演示](docs/media/walkthrough.mp4) · [源码发布包独立复现](docs/release-reproduction.md)
 
 演示来自早期长方体托盘流程，是实际操作截图的剪辑，不是连续录屏。尚不能把本版当成任意 SCAD 模型编辑器。
 
@@ -62,7 +62,7 @@ ScadLatch 专注于这条修改流程：**点选已有部件，添加原作者�
 
 应用使用浏览器界面和本机 Node.js 服务，由服务调用原生 OpenSCAD 命令行引擎，不依赖在线模型 API。
 
-需要 **Node.js 22 或更新版本**。在项目目录运行：
+需要 **Node.js 22 或更新版本**。从 [Releases](https://github.com/WtxwNs/ScadLatch/releases) 下载并解压源码包，在项目目录运行：
 
 ```sh
 npm install
@@ -92,10 +92,11 @@ OpenSCAD 作为独立进程在本机运行；界面使用 Three.js，本机服�
 npm test
 node --import tsx scripts/check-workflow.ts
 node --import tsx scripts/check-compound-workflow.ts
+node --import tsx scripts/check-release-workflow.ts
 npm run build
 ```
 
-这些检查实际编译几何，测量改尺寸后的材料移除量，并验证未选中的实例保持不变。输入包括长方体托盘、两个圆角凸包托盘，以及旋转后的拉伸轮廓。源码测试还检查凹形实体的盲孔不会误切更低的台阶。结果保存在 `.cache/workflow/` 和 `.cache/compound-workflow/`。
+这些检查实际编译几何，测量改尺寸后的材料移除量，并验证未选中的实例保持不变。输入包括长方体托盘、两个圆角凸包托盘，以及旋转后的拉伸轮廓。源码测试还检查凹形实体的盲孔不会误切更低的台阶。发布流程检查会复现本文的 Rounded shell 示例，在宽度 100 和 140 mm 下检查墙面交点及独立 SCAD 导出。结果保存在 `.cache/workflow/`、`.cache/compound-workflow/` 和 `.cache/release-workflow/`。
 
 [外部模型记录](docs/imported-model.md)保留了圆角电子盒外墙开口成功、手机支架拉伸体未完成孔位选择，以及另一支架渲染超时的全部结果。成功修改的电子盒仍有原模型已有的网格缺陷。这些是工程检查，不代表可打印性、广泛兼容性或用户采用；陌生用户的完整首次体验仍待验证。
 

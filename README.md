@@ -11,7 +11,7 @@ The important part comes next: change the original dimensions, and the new
 feature stays attached to its chosen face. Export both the modified source
 and an STL compiled by the actual OpenSCAD engine.
 
-[中文说明](README.zh-CN.md)
+[中文说明](README.zh-CN.md) · [Release downloads](https://github.com/WtxwNs/ScadLatch/releases) · [Issues and feedback](https://github.com/WtxwNs/ScadLatch/issues)
 
 [42-second tray walkthrough](docs/media/walkthrough.mp4) · [Independent source-package check](docs/release-reproduction.md)
 
@@ -21,13 +21,14 @@ The walkthrough uses actual screenshots from the earlier box-based tray workflow
 
 > **Development alpha, 26 October 2026.** Local setup and the source-edit,
 > parameter-change and native STL-generation path have passed engineering checks.
-> The earlier box workflow passed browser checks and an independent Windows
-> installation check. Rounded hulls and extruded profiles now have native-engine
-> checks; their complete browser workflow has not yet been checked independently.
+> The implementer checked the Rounded shell browser workflow. A separate agent
+> reproduced installation and the rounded-shell edit from the source ZIP on
+> Windows, including resizing and standalone SCAD compilation; this was a
+> terminal check, not an independent browser usability test.
 > An external rounded enclosure was edited and resized successfully, with inherited
 > mesh defects; two other external attempts remain incomplete or timed out.
-> [All three results](docs/imported-model.md) are retained. No public release or
-> measured user adoption is claimed.
+> [All three results](docs/imported-model.md) are retained. Real user adoption
+> and repeat use remain unverified.
 
 ## The first task
 
@@ -113,7 +114,8 @@ network as a public rendering service.
 The application uses a browser interface and a local Node.js server that calls the
 native OpenSCAD command-line engine. It does not depend on a hosted model API.
 
-Requires **Node.js 22 or newer**. From this project's directory:
+Requires **Node.js 22 or newer**. Download and extract the source package from
+[Releases](https://github.com/WtxwNs/ScadLatch/releases), then run from the project directory:
 
 ```sh
 npm install
@@ -153,6 +155,7 @@ Run the source, scope and validation checks, then the actual STL workflow:
 npm test
 node --import tsx scripts/check-workflow.ts
 node --import tsx scripts/check-compound-workflow.ts
+node --import tsx scripts/check-release-workflow.ts
 npm run build
 ```
 
@@ -160,7 +163,9 @@ These checks compile actual geometry, measure material removal after resizing,
 and verify that an unselected instance stays unchanged. They cover a box-based
 tray, two rounded hull-based trays and a rotated extruded profile. Source tests
 also check that a blind cut on a concave body leaves lower ledges untouched.
-Outputs are in `.cache/workflow/` and `.cache/compound-workflow/`.
+The release workflow checks the README's Rounded shell example at widths 100
+and 140 mm, including wall intersections and standalone SCAD export. Outputs are
+in `.cache/workflow/`, `.cache/compound-workflow/` and `.cache/release-workflow/`.
 
 The [external-model record](docs/imported-model.md) includes a completed rounded
 enclosure wall edit, a phone-holder extrusion whose hole placement was not

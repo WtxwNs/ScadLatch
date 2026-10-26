@@ -1,4 +1,4 @@
-# 0.1.0 alpha — local preview, 26 October 2026
+# 0.1.0 alpha — 26 October 2026
 
 Windows setup uses the system downloader after a clean-install check exposed a
 Node download timeout. Valid ZIP caches can be reused; failed downloads leave no
@@ -27,7 +27,10 @@ enclosure wall edit survives resizing; inherited non-manifold mesh warnings rema
 A second external model's hole placement remains incomplete, and a third timed
 out. See the [full import record](docs/imported-model.md).
 
-The earlier box workflow has browser checks and independent clean Windows
-installation results. The new compound browser workflow has not yet been checked
-independently. Arbitrary-model compatibility and real user adoption are unverified.
-This is a local development preview, not a public-release claim.
+The implementer checked the Rounded shell browser workflow. A separate agent
+reproduced the source ZIP on Windows, including clean automatic installation
+after the downloader fix, the 100-to-140 mm resize, and standalone SCAD exports.
+Both widths removed 540 mm³ through the right wall while preserving the opposite
+wall. See the [source-package reproduction](docs/release-reproduction.md).
+This terminal reproduction does not establish independent browser usability.
+Arbitrary-model compatibility, real user adoption and repeat use are unverified.

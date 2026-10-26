@@ -7,7 +7,7 @@ ScadLatch's application code: DrLex's phone holder is CC BY 4.0; Torsten Paul's
 stand is CC BY-SA 4.0; Erlan Cassiano's enclosure is MIT. See
 `examples/external/README.md` for exact sources, recorded versions, modifications
 and the adjacent complete license texts. These are model inputs and compatibility
-fixtures, not endorsements. The original three top-level examples were authored
+fixtures, not endorsements. The original top-level examples were authored
 for ScadLatch and use this repository's GPL-3.0-or-later license.
 
 Status checked 26 October 2026. This is the development inventory, not a claim

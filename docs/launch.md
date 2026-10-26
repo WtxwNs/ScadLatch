@@ -1,15 +1,14 @@
-# ScadLatch alpha launch drafts
+# ScadLatch alpha publication materials
 
-Prepared 26 October 2026. **Nothing in this document has been published or sent.**
-The proposed destination is a new public repository, `WtxwNs/ScadLatch`.
-That repository and this project's public release still require authorization.
-The GitHub URLs below are proposed destinations, not evidence of a live release.
-The community post is a separate draft, not authorization to contact anyone.
+Prepared 26 October 2026. Publication of the public repository
+`WtxwNs/ScadLatch` and its alpha release is authorized. This file supplies the
+publication text; it is not confirmation that the upload has completed.
+The community post remains an unsent draft and is outside that authorization.
 
 ## GitHub repository
 
-Proposed repository: **WtxwNs/ScadLatch**, public, GPL-3.0-or-later.
-Publish the `solid-edit` project and its included attribution notices; do not
+Repository: **WtxwNs/ScadLatch**, public, GPL-3.0-or-later.
+Publish the ScadLatch project and its included attribution notices; do not
 publish the surrounding research workspace, caches or downloaded runtime.
 
 Description:
@@ -18,9 +17,9 @@ Description:
 
 Suggested topics: `openscad`, `parametric-design`, `3d-printing`, `cad`.
 
-## GitHub release draft
+## GitHub release text
 
-Proposed tag: **v0.1.0-alpha.1**. Mark as a **pre-release**.
+Tag: **v0.1.0-alpha.1**. Mark as a **pre-release**.
 
 Title: **ScadLatch 0.1.0 alpha — add an opening, keep the parameters**
 
@@ -55,6 +54,11 @@ outer wall. Add a rectangle with width **18**, height **10**, local Y position
 **32**, local Z position **17**, and depth **5** mm. Apply, then change the
 original `width` from **100 to 140** and rebuild. Inspect the side opening and
 export the result.
+
+The implementer checked this browser workflow. An
+[independent Windows source-package check](https://github.com/WtxwNs/ScadLatch/blob/v0.1.0-alpha.1/docs/release-reproduction.md)
+reproduced installation, the edit at both widths and standalone SCAD exports.
+That check ran from the terminal; it was not an independent browser usability test.
 
 Windows setup locates OpenSCAD or downloads its official portable build
 (approximately 22 MB). On macOS/Linux, install OpenSCAD first or set
@@ -161,9 +165,10 @@ opening and change a dimension afterward. An issue with the file's license,
 desired cut and actual result would help identify where this workflow breaks—or
 where it earns a place in your usual modeling work.
 
-## Before an authorized publication
+## Release handoff
 
-Verify the new repository URL and tag, preserve all model/third-party notices,
-and check the links in the copyable text after upload. Attach the existing media
-without describing the screenshot montage as a continuous recording. There is
-no claimed public release, external trial, repeat use or spontaneous sharing yet.
+Verify the repository URL and tag, preserve all model/third-party notices, and
+check the links in the copyable text after upload. Confirm the live release before
+reporting publication complete. Attach the existing media without describing the
+screenshot montage as a continuous recording. Real user trials, repeat use and
+spontaneous sharing remain unverified. Community posting is not authorized.
