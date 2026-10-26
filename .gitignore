@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.runtime/
+.cache/
+*.log
+docs/media/caption-*.txt
+docs/media/capture-note.txt
+docs/media/walkthrough-frames.txt

@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-26T12:49:46.945Z",
+  "scope": "Same three external source models; terminal product runtime, not human UI acceptance.",
+  "attempts": [
+    {
+      "model": "Erlan enclosure",
+      "result": "passed",
+      "configuration": "show_lid=false; resize pcb_len 80 to 110 only",
+      "feature": {
+        "primitiveId": "n0",
+        "route": "/n47/n21/n22/n23/n0",
+        "anchor": "origin",
+        "face": "x+",
+        "kind": "rectangle",
+        "u": 25,
+        "v": 10,
+        "width": 12,
+        "height": 6,
+        "diameter": 6,
+        "depth": 4
+      },
+      "base": {
+        "triangles": 3424,
+        "volume": 24657.500354426593,
+        "unmatchedEdges": 8
+      },
+      "edited": {
+        "triangles": 3444,
+        "volume": 24477.500354426622,
+        "unmatchedEdges": 8
+      },
+      "wideBase": {
+        "triangles": 3424,
+        "volume": 31482.52046545865,
+        "unmatchedEdges": 8
+      },
+      "wide": {
+        "triangles": 3444,
+        "volume": 31302.52046545862,
+        "unmatchedEdges": 8
+      },
+      "delta": 179.9999999999709,
+      "wideDelta": 180.0000000000291,
+      "saved": {
+        "independent": {
+          "triangles": 3444,
+          "volume": 24477.500354426767,
+          "unmatchedEdges": 8
+        },
+        "log": "Geometries in cache: 38\r\nGeometry cache size in bytes: 344176\r\nCGAL Polyhedrons in cache: 13\r\nCGAL cache size in bytes: 8461296\r\nTotal rendering time: 0:00:06.831\r\n   Top level object is a 3D object:\r\n   Simple:         no\r\n   Vertices:     1696\r\n   Halfedges:    5120\r\n   Edges:        2560\r\n   Halffacets:   1732\r\n   Facets:        866\r\n   Volumes:         2\r\nWARNING: Object may not be a valid 2-manifold and may need repair!\r\nEXPORT-WARNING: Exported object may not be a valid 2-manifold and may need repair"
+      },
+      "savedWide": {
+        "independent": {
+          "triangles": 3444,
+          "volume": 31302.52046545859,
+          "unmatchedEdges": 8
+        },
+        "log": "Geometries in cache: 38\r\nGeometry cache size in bytes: 344752\r\nCGAL Polyhedrons in cache: 13\r\nCGAL cache size in bytes: 8461296\r\nTotal rendering time: 0:00:06.806\r\n   Top level object is a 3D object:\r\n   Simple:         no\r\n   Vertices:     1696\r\n   Halfedges:    5120\r\n   Edges:        2560\r\n   Halffacets:   1732\r\n   Facets:        866\r\n   Volumes:         2\r\nWARNING: Object may not be a valid 2-manifold and may need repair!\r\nEXPORT-WARNING: Exported object may not be a valid 2-manifold and may need repair"
+      }
+    },
+    {
+      "model": "DrLex smartphone holder",
+      "result": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: No cap location with sampled 2 mm material clearance",
+      "note": "Initial harness also skipped remaining X candidates after a ring test failed; this is not product counterevidence by itself."
+    },
+    {
+      "model": "Torsten phone stand",
+      "result": "failed to render",
+      "error": "Error: OpenSCAD took longer than 90 seconds. Simplify the model or reduce resolution ($fn), then try again."
+    },
+    {
+      "model": "DrLex smartphone holder",
+      "result": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: No cap location with sampled 2 mm material clearance",
+      "note": "Corrected candidate traversal, same original model. Conservative 2 mm-radius ring on a 2 mm grid still found no certified material point for a proposed 2 mm-diameter hole. No feature applied. This does not prove all cap locations are unusable."
+    },
+    {
+      "model": "Erlan enclosure",
+      "result": "passed",
+      "verification": "fixed-plane-cap refresh",
+      "verifiedAt": "2026-10-26T12:58:31.145Z",
+      "configuration": "show_lid=false; resize pcb_len 80 to 110 only",
+      "feature": {
+        "primitiveId": "n0",
+        "route": "/n47/n21/n22/n23/n0",
+        "anchor": "origin",
+        "face": "x+",
+        "kind": "rectangle",
+        "u": 25,
+        "v": 10,
+        "width": 12,
+        "height": 6,
+        "diameter": 6,
+        "depth": 4
+      },
+      "base": {
+        "triangles": 3424,
+        "volume": 24657.5003544266,
+        "unmatchedEdges": 8
+      },
+      "edited": {
+        "triangles": 3444,
+        "volume": 24477.5003544266,
+        "unmatchedEdges": 8
+      },
+      "wideBase": {
+        "triangles": 3424,
+        "volume": 31482.52046545862,
+        "unmatchedEdges": 8
+      },
+      "wide": {
+        "triangles": 3444,
+        "volume": 31302.52046545862,
+        "unmatchedEdges": 8
+      },
+      "delta": 180,
+      "wideDelta": 180,
+      "saved": {
+        "independent": {
+          "triangles": 3444,
+          "volume": 24477.500354426622,
+          "unmatchedEdges": 8
+        },
+        "log": "Geometries in cache: 42\r\nGeometry cache size in bytes: 436800\r\nCGAL Polyhedrons in cache: 14\r\nCGAL cache size in bytes: 9194512\r\nTotal rendering time: 0:00:07.333\r\n   Top level object is a 3D object:\r\n   Simple:         no\r\n   Vertices:     1696\r\n   Halfedges:    5120\r\n   Edges:        2560\r\n   Halffacets:   1732\r\n   Facets:        866\r\n   Volumes:         2\r\nWARNING: Object may not be a valid 2-manifold and may need repair!\r\nEXPORT-WARNING: Exported object may not be a valid 2-manifold and may need repair"
+      },
+      "savedWide": {
+        "independent": {
+          "triangles": 3444,
+          "volume": 31302.52046545865,
+          "unmatchedEdges": 8
+        },
+        "log": "Geometries in cache: 42\r\nGeometry cache size in bytes: 435216\r\nCGAL Polyhedrons in cache: 14\r\nCGAL cache size in bytes: 9194512\r\nTotal rendering time: 0:00:07.340\r\n   Top level object is a 3D object:\r\n   Simple:         no\r\n   Vertices:     1696\r\n   Halfedges:    5120\r\n   Edges:        2560\r\n   Halffacets:   1732\r\n   Facets:        866\r\n   Volumes:         2\r\nWARNING: Object may not be a valid 2-manifold and may need repair!\r\nEXPORT-WARNING: Exported object may not be a valid 2-manifold and may need repair"
+      }
+    }
+  ]
+}
